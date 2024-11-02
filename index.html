@@ -1,88 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRCustom Landing Page</title>
-    <style></style>
+    <title>BrCustom - Lavanderia de Tênis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Myanmar+Khyay&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>BrCustom</h1>
+    <header>
+        <div class="logo">BrCustom</div>
+        <nav>
+            <ul>
+                <li><p> <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F554598131939%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAabhS853ax8eMNNbtxHVkIVIVXIs5SY2yq7wY3TTRKwsvoZt7vXk0zte4X0_aem_VuYgQU2GtpONpo4xIr-uLQ&e=AT3oM6KmJAxqAiSeeLvYtYd0PknRDgZorep0GPgbsBBhZBCCElJm04SWYKmGm5w2IiWvUU7FN3oMlc39rrhko2ZzoF6MUTSC5O9_McjlCyCnew5-xUsMag"><b>Whatsapp</b> (45) 9813-1939</a></p></li>
+                <li><p> <a href="https://www.instagram.com/lavanderia_brcustom?igsh=MTdyNXRmamk1d21qdA%3D%3D"><b>Instagram</b> @brcustom</a></p></li>
+                <li><a href="#localizacao">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <img src="./IMAGENS/logo_nome.PNG" alt="logo da marca" width="50" height="50"> <!--arrumar tamanho da logo-->
+    <main>
+        <section class="intro">
+            <h1>A PRIMEIRA LAVANDERIA ESPECIALIZADA EM SNEAKERS DE FOZ DO IGUAÇU</h1>
+        </section>
 
-    <h2>A PRIMEIRA LAVANDERIA ESPECIALIZADA EM SNEAKERS DE FOZ DO IGUAÇU</h2>
-   
-    <video controls poster="./IMAGENS/logo.PNG" width="500" height="500"> <!--arrumar tamanho do video-->
-        <source src="./VIDEO/video_lavagem.mp4" type="video/mp4">
-        <source src="./VIDEO/video_lavagem_webm.webm" type="video/webm">
-    </video>
+        <section class="content">
+            <div class="sobre">
+                <h2>Sobre nós</h2>
+                <p>Oferecemos serviços especializados de lavagem e restauração de tênis, garantindo preservação, durabilidade e estética com processos inovadores e de alta qualidade, visando à plena satisfação dos clientes.</p>
+            </div>
+            <div class="servicos">
+                <h2>Serviços</h2>
+                <p>Seu tênis novo de novo! Este é nosso tema e especialidade: a lavagem e restauração de seu calçado, fazendo uso de produtos importados específicos para cada tipo de material.</p>
+            </div>
+        </section>
+        
+        <section class="missao-valores">
+            <div class="missao">
+                <h2>Missão</h2>
+                <p>Oferecer serviços especializados de lavagem e restauração de tênis, garantindo preservação, durabilidade e estética com processos inovadores e de alta qualidade, visando à plena satisfação dos clientes.</p>
+            </div>
+            <div class="valores">
+                <h2>Valores</h2>
+                <ul><p>
+                    Qualidade no tratamento detalhado dos tênis.
+                    Personalização conforme as necessidades de cada cliente.
+                    Confiança baseada em transparência e responsabilidade.
+                    Inovação com técnicas eficientes e superiores.
+                    Excelência no atendimento ágil e respeitoso.
+                </p>
+                    
+                </ul>
+            </div>
+        </section>
 
-    <img src="./IMAGENS/tabela_de_valores.jfif" alt="tabela dos valores de lavagem" width="250" height="500"> <!--essa fica ao lado do sobre nós e serviços-->
+        <section class="videos">
+            <h2>Galeria de Vídeos</h2>
+            <div class="video-frames">
+                <div class="frame">
+                    
+                    <video width="510" height="1050" controls>
+                        <source src="VIDEOS/video_lavagem_mp4.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+                <div class="frame">
+                    
+                    
+                    <video width="510" height="1050" controls>
+                        <source src="VIDEOS/video_lavagem_jordan.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+                <div class="frame">
+                    
+                    
+                    <video width="510" height="1050" controls>
+                        <source src="VIDEOS/video_lavagem_vans.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+            </div>
+        </section>
 
-    <h3>SOBRE NÓS</h3>
-
-    <p>
-        Oferecemos serviços especializados de lavagem e restauração de tênis, garantindo preservação, durabilidade e estética com processos inovadores e de alta qualidade, visando à plena satisfação dos clientes.
-    </p>
-
-    <h3>SERVIÇOS</h3>
-
-    <p>
-        Seu tênis novo de novo! Este é nosso tema e especialidade: a lavagem e restauração de seu calçado, fazendo uso de produtos importados específicos para cada tipo de material.
-    </p>
-
-    <img src="./IMAGENS/air_force_sujo.png" alt="Tenis Nike Air Force sujo" width="200" height="200">
-    <img src="./IMAGENS/air_force_limpo.png" alt="Tenis Nike Air Force limpo" width="200" height="200">
-    <!--lado a lado pra comparar, válido escrever algo sobre se quiser tipo Antes -> Depois ou sla-->
-
-    <h3>MISSÃO</h3>
-
-    <p>
-        Oferecer serviços especializados de lavagem e restauração de tênis, garantindo preservação, durabilidade e estética com processos inovadores e de alta qualidade, visando à plena satisfação dos clientes.
-    </p>
-
-    <h3>VALORES</h3>
-
-    <p>
-    <ul>
-        <li><b>Qualidade</b> no tratamento detalhado dos tênis.</li>  
-        <li><b>Personalização</b> conforme as necessidades de cada cliente.</li>  
-        <li><b>Confiança</b> baseada em transparência e responsabilidade.</li>  
-        <li><b>Inovação</b> com técnicas eficientes e superiores.</li>  
-        <li><b>Excelência</b> no atendimento ágil e respeitoso.</li>
-    </ul>
-    </p>
-
-    <img src="./IMAGENS/tenis_bege_limpo.png" alt="Tenis bege limpo" width="200" height="200">
-    <img src="./IMAGENS/vans_limpo.png" alt="Tenis Vans limpo" width="200" height="200">
-    
-    <h3>ENTRE EM CONTATO</h3>
-
-    <p> <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F554598131939%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAabhS853ax8eMNNbtxHVkIVIVXIs5SY2yq7wY3TTRKwsvoZt7vXk0zte4X0_aem_VuYgQU2GtpONpo4xIr-uLQ&e=AT3oM6KmJAxqAiSeeLvYtYd0PknRDgZorep0GPgbsBBhZBCCElJm04SWYKmGm5w2IiWvUU7FN3oMlc39rrhko2ZzoF6MUTSC5O9_McjlCyCnew5-xUsMag"><b>Whatsapp</b> (45) 9813-1939</a> <!--criar um link pro zap--></p>
-    <p> <a href="https://www.instagram.com/lavanderia_brcustom?igsh=MTdyNXRmamk1d21qdA%3D%3D"><b>Instagram</b> @brcustom</a><!--criar um link pro insta--></p>
-
-    <!-- 2 qr code (insta e zap) - falta conseguir -->
-
-    <h3>LOCALIZAÇÃO</h3>
-
-    <p>
-        Lorem ipsum dolor sit amet, Foz do Iguaçu, Paraná
-    </p>
-
-    <h3>MÉTODOS DE PAGAMENTO</h3>
-
-    <p>
-        <ul>
-            <li>PIX</li>
-            <li>Dinheiro</li>
-            <li>Cartão de credito</li>
-            <li>Cartão de debito</li>
-        </ul>
-    </p>
-
-
+        <section class="footer">
+            <div class="contato">
+                <h2>Entre em Contato!</h2>
+                <p> <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F554598131939%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAabhS853ax8eMNNbtxHVkIVIVXIs5SY2yq7wY3TTRKwsvoZt7vXk0zte4X0_aem_VuYgQU2GtpONpo4xIr-uLQ&e=AT3oM6KmJAxqAiSeeLvYtYd0PknRDgZorep0GPgbsBBhZBCCElJm04SWYKmGm5w2IiWvUU7FN3oMlc39rrhko2ZzoF6MUTSC5O9_McjlCyCnew5-xUsMag"><b>Whatsapp</b> (45) 9813-1939</a></p>
+                <p> <a href="https://www.instagram.com/lavanderia_brcustom?igsh=MTdyNXRmamk1d21qdA%3D%3D"><b>Instagram</b> @brcustom</a></p>
+            </div>
+            <div class="localizacao" id="localizacao">
+                <h2>Localização</h2>
+                <p>Rua Mato Grosso, 1579, Vila Maracanã, Foz do Iguaçu, Paraná</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.080924690507!2d-54.57383646805458!3d-25.533805307444727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f69050f60f0819%3A0x6ebcbcd2bdaf9089!2sR.%20Mato%20Grosso%2C%201579%20-%20Vila%20Maracana!5e0!3m2!1spt-BR!2sbr!4v1730333031293!5m2!1spt-BR!2sbr" width="250" height="130" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="pagamento">
+                <h2>Métodos de Pagamento</h2>
+                <ul>
+                    <li>Pix</li>
+                    <li>Dinheiro</li>
+                    <li>Cartões de crédito e débito</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
-<!--RESPONSIVIDADE E BGL MOBILE FALTANDO-->
