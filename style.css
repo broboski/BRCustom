@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Myanmar Khyay', sans-serif;
+    background-color: #EDE2D3;
+    color: #3A4363;
+    font-size: 1.4rem; /* Aumenta o tamanho da fonte */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #3A4363;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Finger Paint', cursive;
+}
+
+nav ul li a:hover {
+    color: #EDE2D3;
+}
+
+main {
+    padding: 2rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    font-family: 'Finger Paint', cursive;
+    margin-bottom: 1rem;
+}
+
+.media {
+    background-color: #fff;
+    border: 2px dashed #ddd;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+.video {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.content {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que as seções se reorganizem em telas menores */
+}
+
+.sobre, .servicos, .missao, .valores {
+    flex: 1;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem; /* Adiciona espaço entre as seções */
+}
+
+.missao-valores {
+    display: flex;
+    gap: 2rem; /* Espaçamento entre Missão e Valores */
+    margin-top: 2rem; /* Espaço acima das seções Missão e Valores */
+}
+
+.missao, .valores {
+    flex: 1; /* Faz com que Missão e Valores ocupem espaço igual */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tabela-valores img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.videos {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.videos h2 {
+    font-size: 1.5rem;
+    font-family: 'Finger Paint', cursive;
+    margin-bottom: 1rem;
+}
+
+.video-frames {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.frame {
+    background-color: #fff;
+    border: 2px dashed #ddd;
+    padding: 1rem;
+    width: 600px;
+    text-align: center;
+}
+
+.frame video {
+    width: 100%; /* Faz o vídeo ocupar toda a largura do frame */
+    height: auto; /* Mantém a proporção do vídeo */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #3A4363;
+    color: #fff;
+}
+
+.footer div {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Finger Paint', cursive; /* Fonte atualizada */
+}
+
+.footer a {
+    color: #fff; /* Cor desejada para os links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.footer a:hover {
+    color: #EDE2D3; /* Cor ao passar o mouse */
+}
+
+.pagamento ul {
+    list-style: none;
+    padding: 0;
+}
