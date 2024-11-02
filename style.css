@@ -1,167 +1,191 @@
+/* Reset de margem e padding para todos os elementos */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura dos elementos */
 }
 
+/* Estilos globais para o corpo da página */
 body {
-    font-family: 'Myanmar Khyay', sans-serif;
-    background-color: #EDE2D3;
-    color: #3A4363;
-    font-size: 1.4rem; /* Aumenta o tamanho da fonte */
+    font-family: 'Myanmar Khyay', sans-serif; /* Fonte principal */
+    background-color: #EDE2D3; /* Cor de fundo suave */
+    color: #3A4363; /* Cor do texto */
+    font-size: 1.4rem; /* Tamanho da fonte */
 }
 
+/* Estilos para o cabeçalho */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #3A4363;
-    color: #fff;
+    display: flex; /* Usa flexbox para layout */
+    justify-content: space-between; /* Espaça os itens */
+    align-items: center; /* Alinha itens verticalmente */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    background-color: #3A4363; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto */
 }
 
+/* Estilos para o menu de navegação */
 nav ul {
-    display: flex;
-    list-style: none;
+    display: flex; /* Flexbox para o layout do menu */
+    list-style: none; /* Remove os marcadores da lista */
 }
 
 nav ul li {
-    margin-left: 1.5rem;
+    margin-left: 1.5rem; /* Espaço entre os itens do menu */
 }
 
+/* Estilos dos links no menu */
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Finger Paint', cursive;
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Torna o texto em negrito */
+    font-family: 'Finger Paint', cursive; /* Fonte estilizada para os links */
 }
 
+/* Efeito de hover para os links do menu */
 nav ul li a:hover {
-    color: #EDE2D3;
+    color: #EDE2D3; /* Cor ao passar o mouse */
 }
 
+/* Estilos principais do conteúdo */
 main {
-    padding: 2rem;
+    padding: 2rem; /* Espaçamento interno */
 }
 
+/* Estilos para a seção de introdução */
 .intro {
-    text-align: center;
-    margin-bottom: 2rem;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 2rem; /* Espaço abaixo da seção */
 }
 
 .intro h1 {
-    font-size: 2rem;
-    font-family: 'Finger Paint', cursive;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Tamanho do título */
+    font-family: 'Finger Paint', cursive; /* Fonte estilizada */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
 }
 
+/* Estilos para caixas de mídia */
 .media {
-    background-color: #fff;
-    border: 2px dashed #ddd;
-    padding: 2rem;
-    margin: 1rem 0;
+    background-color: #fff; /* Fundo branco */
+    border: 2px dashed #ddd; /* Borda pontilhada */
+    padding: 2rem; /* Espaçamento interno */
+    margin: 1rem 0; /* Margem vertical */
 }
 
+/* Estilos para a descrição do vídeo */
 .video {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1rem;
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #666; /* Cor do texto */
+    margin-bottom: 1rem; /* Espaço abaixo */
 }
 
+/* Estilos para o conteúdo principal */
 .content {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Permite que as seções se reorganizem em telas menores */
+    display: flex; /* Usa flexbox para layout */
+    gap: 2rem; /* Espaçamento entre os itens */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    flex-wrap: wrap; /* Permite que itens se movam para a linha seguinte em telas pequenas */
 }
 
+/* Estilos para seções como Sobre, Serviços, etc. */
 .sobre, .servicos, .missao, .valores {
-    flex: 1;
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem; /* Adiciona espaço entre as seções */
+    flex: 1; /* Faz as seções ocuparem espaço igual */
+    background-color: #fff; /* Fundo branco */
+    padding: 1.5rem; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 1.5rem; /* Espaço entre seções */
 }
 
+/* Estilos para o layout de Missão e Valores */
 .missao-valores {
-    display: flex;
-    gap: 2rem; /* Espaçamento entre Missão e Valores */
-    margin-top: 2rem; /* Espaço acima das seções Missão e Valores */
+    display: flex; /* Flexbox para layout */
+    gap: 2rem; /* Espaçamento entre os itens */
+    margin-top: 2rem; /* Margem superior */
 }
 
+/* Estilos para as seções Missão e Valores */
 .missao, .valores {
-    flex: 1; /* Faz com que Missão e Valores ocupem espaço igual */
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    flex: 1; /* Espaço igual entre as seções */
+    background-color: #fff; /* Fundo branco */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Oculta conteúdo que ultrapassa a borda */
 }
 
+/* Estilos para imagens dentro da tabela de valores */
 .tabela-valores img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    max-width: 100%; /* Garante que a imagem não exceda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
 }
 
+/* Estilos para a seção de vídeos */
 .videos {
-    margin-top: 2rem;
-    text-align: center;
+    margin-top: 2rem; /* Margem superior */
+    text-align: center; /* Centraliza o texto */
 }
 
 .videos h2 {
-    font-size: 1.5rem;
-    font-family: 'Finger Paint', cursive;
-    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Tamanho do subtítulo */
+    font-family: 'Finger Paint', cursive; /* Fonte estilizada */
+    margin-bottom: 1rem; /* Espaço abaixo do subtítulo */
 }
 
+/* Estilos para o layout dos frames dos vídeos */
 .video-frames {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    display: flex; /* Flexbox para layout */
+    gap: 1.5rem; /* Espaçamento entre os frames */
+    justify-content: center; /* Centraliza os frames */
 }
 
+/* Estilos para cada frame de vídeo */
 .frame {
-    background-color: #fff;
-    border: 2px dashed #ddd;
-    padding: 1rem;
-    width: 600px;
-    text-align: center;
+    background-color: #fff; /* Fundo branco */
+    border: 2px dashed #ddd; /* Borda pontilhada */
+    padding: 1rem; /* Espaçamento interno */
+    width: 600px; /* Largura fixa */
+    text-align: center; /* Centraliza o conteúdo */
 }
 
+/* Estilos para vídeos dentro dos frames */
 .frame video {
     width: 100%; /* Faz o vídeo ocupar toda a largura do frame */
     height: auto; /* Mantém a proporção do vídeo */
 }
 
+/* Estilos para o rodapé */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: #3A4363;
-    color: #fff;
+    display: flex; /* Flexbox para layout */
+    justify-content: space-between; /* Espaçamento igual entre os itens */
+    margin-top: 2rem; /* Margem superior */
+    padding: 2rem; /* Espaçamento interno */
+    background-color: #3A4363; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
 }
 
+/* Estilos para os itens do rodapé */
 .footer div {
-    flex: 1;
-    text-align: center;
-    padding: 1rem;
-    font-family: 'Finger Paint', cursive; /* Fonte atualizada */
+    flex: 1; /* Espaço igual para cada item */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem; /* Espaçamento interno */
+    font-family: 'Finger Paint', cursive; /* Fonte estilizada */
 }
 
+/* Estilos para links no rodapé */
 .footer a {
-    color: #fff; /* Cor desejada para os links */
-    text-decoration: none; /* Remove o sublinhado */
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
 }
 
+/* Efeito de hover para links do rodapé */
 .footer a:hover {
     color: #EDE2D3; /* Cor ao passar o mouse */
 }
 
+/* Estilos para listas na seção de pagamento */
 .pagamento ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding */
 }
