@@ -1,191 +1,294 @@
-/* Reset de margem e padding para todos os elementos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura dos elementos */
-}
+    /* Reset de margem e padding para todos os elementos */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-/* Estilos globais para o corpo da página */
-body {
-    font-family: 'Myanmar Khyay', sans-serif; /* Fonte principal */
-    background-color: #EDE2D3; /* Cor de fundo suave */
-    color: #3A4363; /* Cor do texto */
-    font-size: 1.4rem; /* Tamanho da fonte */
-}
+    /* Estilos globais para o corpo da página */
+    body {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif; /* Alterado para a fonte Roboto para o corpo */
+        background-color: #EDE2D3;
+        color: #3A4363;
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
 
-/* Estilos para o cabeçalho */
-header {
-    display: flex; /* Usa flexbox para layout */
-    justify-content: space-between; /* Espaça os itens */
-    align-items: center; /* Alinha itens verticalmente */
-    padding: 1rem 2rem; /* Espaçamento interno */
-    background-color: #3A4363; /* Cor de fundo do cabeçalho */
-    color: #fff; /* Cor do texto */
-}
+    /* Estilos para o cabeçalho */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #3A4363;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+    }
 
-/* Estilos para o menu de navegação */
-nav ul {
-    display: flex; /* Flexbox para o layout do menu */
-    list-style: none; /* Remove os marcadores da lista */
-}
+    /* Logo com animação de linha desenhada */
+    .logo {
+        font-size: 2rem;
+        font-family: 'Finger Paint', cursive;
+        font-weight: bold;
+        position: relative;
+        color: #fff;
+        z-index: 10;
+    }
 
-nav ul li {
-    margin-left: 1.5rem; /* Espaço entre os itens do menu */
-}
+    .logo::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background-color: #EDE2D3;
+        transition: width 1s ease-in-out;
+    }
 
-/* Estilos dos links no menu */
-nav ul li a {
-    color: #fff; /* Cor do texto dos links */
-    text-decoration: none; /* Remove sublinhado */
-    font-weight: bold; /* Torna o texto em negrito */
-    font-family: 'Finger Paint', cursive; /* Fonte estilizada para os links */
-}
+    .logo:hover::after {
+        width: 100%;
+    }
 
-/* Efeito de hover para os links do menu */
-nav ul li a:hover {
-    color: #EDE2D3; /* Cor ao passar o mouse */
-}
+    .icones{
+        display: flex;
+        justify-content: flex-end; /* Alinha os ícones à direita */
+        gap: 10px; /* Ajusta o espaço entre os ícones */
+        position: absolute; /* Garante que o contêiner fique fixo em relação à tela */
+        right: 20px; /* Distância da borda direita da tela */
+        top: 10px; /* Distância do topo da tela */
+    }
 
-/* Estilos principais do conteúdo */
-main {
-    padding: 2rem; /* Espaçamento interno */
-}
+    .icones a:hover img {
+        transform: scale(1.1); /* Aumenta os ícones quando o mouse passar sobre eles */
+    }
 
-/* Estilos para a seção de introdução */
-.intro {
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 2rem; /* Espaço abaixo da seção */
-}
+    nav ul li {
+        margin-left: 1.5rem;
+    }
 
-.intro h1 {
-    font-size: 2rem; /* Tamanho do título */
-    font-family: 'Finger Paint', cursive; /* Fonte estilizada */
-    margin-bottom: 1rem; /* Espaço abaixo do título */
-}
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif; /* Fonte para navegação */
+        transition: color 0.3s ease;
+    }
 
-/* Estilos para caixas de mídia */
-.media {
-    background-color: #fff; /* Fundo branco */
-    border: 2px dashed #ddd; /* Borda pontilhada */
-    padding: 2rem; /* Espaçamento interno */
-    margin: 1rem 0; /* Margem vertical */
-}
+    nav ul li a:hover {
+        color: #EDE2D3;
+    }
 
-/* Estilos para a descrição do vídeo */
-.video {
-    font-size: 1rem; /* Tamanho da fonte */
-    color: #666; /* Cor do texto */
-    margin-bottom: 1rem; /* Espaço abaixo */
-}
+    /* Animação "slide-in" para as seções */
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-/* Estilos para o conteúdo principal */
-.content {
-    display: flex; /* Usa flexbox para layout */
-    gap: 2rem; /* Espaçamento entre os itens */
-    justify-content: space-between; /* Espaça os itens igualmente */
-    flex-wrap: wrap; /* Permite que itens se movam para a linha seguinte em telas pequenas */
-}
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 
-/* Estilos para seções como Sobre, Serviços, etc. */
-.sobre, .servicos, .missao, .valores {
-    flex: 1; /* Faz as seções ocuparem espaço igual */
-    background-color: #fff; /* Fundo branco */
-    padding: 1.5rem; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 1.5rem; /* Espaço entre seções */
-}
+    main .intro h1,
+    .content .sobre,
+    .content .servicos,
+    .missao-valores .missao,
+    .missao-valores .valores {
+        animation: slideIn 1.5s ease-out;
+    }
 
-/* Estilos para o layout de Missão e Valores */
-.missao-valores {
-    display: flex; /* Flexbox para layout */
-    gap: 2rem; /* Espaçamento entre os itens */
-    margin-top: 2rem; /* Margem superior */
-}
+    .missao-valores .missao,
+    .missao-valores .valores {
+        animation: fadeIn 2s ease-in-out;
+    }
 
-/* Estilos para as seções Missão e Valores */
-.missao, .valores {
-    flex: 1; /* Espaço igual entre as seções */
-    background-color: #fff; /* Fundo branco */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    overflow: hidden; /* Oculta conteúdo que ultrapassa a borda */
-}
+    /* Efeitos de hover nas seções (Sobre, Serviços, Missão, Valores) */
+    .sobre, .servicos, .missao, .valores {
+        padding: 1.5rem;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Estilos para imagens dentro da tabela de valores */
-.tabela-valores img {
-    max-width: 100%; /* Garante que a imagem não exceda a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove o espaço abaixo da imagem */
-    margin: 0 auto; /* Centraliza a imagem */
-}
+    .sobre:hover, .servicos:hover, .missao:hover, .valores:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    }
 
-/* Estilos para a seção de vídeos */
-.videos {
-    margin-top: 2rem; /* Margem superior */
-    text-align: center; /* Centraliza o texto */
-}
+    /* Zoom-in suave para imagens */
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
 
-.videos h2 {
-    font-size: 1.5rem; /* Tamanho do subtítulo */
-    font-family: 'Finger Paint', cursive; /* Fonte estilizada */
-    margin-bottom: 1rem; /* Espaço abaixo do subtítulo */
-}
+    .videos .frame video,
+    .tabela-valores img {
+        animation: zoomIn 1.5s ease-out;
+        transition: transform 0.3s ease;
+    }
 
-/* Estilos para o layout dos frames dos vídeos */
-.video-frames {
-    display: flex; /* Flexbox para layout */
-    gap: 1.5rem; /* Espaçamento entre os frames */
-    justify-content: center; /* Centraliza os frames */
-}
+    .videos .frame video:hover,
+    .tabela-valores img:hover {
+        transform: scale(1.05);
+    }
 
-/* Estilos para cada frame de vídeo */
-.frame {
-    background-color: #fff; /* Fundo branco */
-    border: 2px dashed #ddd; /* Borda pontilhada */
-    padding: 1rem; /* Espaçamento interno */
-    width: 600px; /* Largura fixa */
-    text-align: center; /* Centraliza o conteúdo */
-}
+    /* Estilos principais do conteúdo */
+    main {
+        padding: 2rem;
+    }
 
-/* Estilos para vídeos dentro dos frames */
-.frame video {
-    width: 100%; /* Faz o vídeo ocupar toda a largura do frame */
-    height: auto; /* Mantém a proporção do vídeo */
-}
+    .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 
-/* Estilos para o rodapé */
-.footer {
-    display: flex; /* Flexbox para layout */
-    justify-content: space-between; /* Espaçamento igual entre os itens */
-    margin-top: 2rem; /* Margem superior */
-    padding: 2rem; /* Espaçamento interno */
-    background-color: #3A4363; /* Cor de fundo do rodapé */
-    color: #fff; /* Cor do texto */
-}
+    .intro h1 {
+        font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 1rem;
+    }
 
-/* Estilos para os itens do rodapé */
-.footer div {
-    flex: 1; /* Espaço igual para cada item */
-    text-align: center; /* Centraliza o texto */
-    padding: 1rem; /* Espaçamento interno */
-    font-family: 'Finger Paint', cursive; /* Fonte estilizada */
-}
+    /* Ajustes para o layout de conteúdo (Sobre, Serviços, Missão, Valores) */
+    .image-text {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 40px auto;
+        max-width: 1000px;
+        padding: 20px;
+    }
 
-/* Estilos para links no rodapé */
-.footer a {
-    color: #fff; /* Cor dos links */
-    text-decoration: none; /* Remove sublinhado */
-}
+    .image-container {
+        flex: 1;
+        max-width: 50%; /* Ajuste o tamanho máximo das imagens */
+        margin-right: 20px; /* Espaço entre imagem e texto */
+    }
 
-/* Efeito de hover para links do rodapé */
-.footer a:hover {
-    color: #EDE2D3; /* Cor ao passar o mouse */
-}
+    .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px; /* Borda arredondada para um design moderno */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-/* Estilos para listas na seção de pagamento */
-.pagamento ul {
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o padding */
+    .text-container {
+        flex: 1;
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .text-container h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #3A4363;
+    }
+
+    .text-container p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .image-text.reverse {
+        flex-direction: row-reverse; /* Troca a posição, colocando imagem à direita e texto à esquerda */
+    }
+
+    /* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .image-text {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .image-container, .text-container {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaço entre imagem e texto em telas pequenas */
+    }
+
+    .image-container img {
+        width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
 }
+    /* Estilos para o rodapé */
+    .footer {
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding: 2rem;
+        background-color: #3A4363;
+        color: #fff;
+    }
+
+    .footer div {
+        flex: 1;
+        text-align: center;
+        padding: 1rem;
+        font-family: 'Finger Paint', cursive;
+    }
+
+    .footer a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+        color: #EDE2D3;
+    }
+
+    /* Listas no rodapé */
+    .pagamento ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Efeito de fade para a entrada dos textos */
+    @keyframes fadeInText {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .sobre p,
+    .servicos p,
+    .missao p,
+    .valores p {
+        animation: fadeInText 1.5s ease-out;
+    }
+
+    /* Ajustes para melhorar a fluidez do site */
+    section {
+        margin-bottom: 2rem;
+    }
+    
